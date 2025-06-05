@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antonimo <antonimo@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: jortiz-m <jortiz-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 13:09:48 by jortiz-m          #+#    #+#             */
-/*   Updated: 2025/06/03 12:14:10 by antonimo         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:10:42 by jortiz-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ void	ft_export(t_minishell *minishell)
 {
 	int		i;
 
-	i = 1;
-	if (minishell->args_num == 1)
+	if (matrix_len(minishell->input_matrix) == 1)
 	{
 		show_declare_matrix(minishell->declare_matrix);
-		return ;
+		return;
 	}
+	i = 1;
 	while (minishell->input_matrix[i])
 	{
 		if (!valid_symbols(minishell->input_matrix[i]))
