@@ -6,7 +6,7 @@
 /*   By: jortiz-m <jortiz-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 13:40:32 by antonimo          #+#    #+#             */
-/*   Updated: 2025/06/05 14:07:40 by jortiz-m         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:31:33 by jortiz-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,5 @@ void	ft_env(t_minishell *minishell)
 		minishell->exit_status = 1;
 		return ;
 	}
-
 	print_matrix(minishell->envp);
-	if (minishell->pid == CHILD)
-	{
-		free_minishell(minishell);
-		free_matrix(minishell->envp);
-		free_matrix(minishell->declare_matrix);
-		exit(EXIT_SUCCESS);
-	}
 }
